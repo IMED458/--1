@@ -28,6 +28,7 @@ whr.Send()
 ; Using 'true' above and the call below allows the script to remain responsive.
 whr.WaitForResponse()
 newahk := whr.ResponseText
+FileDelete,ტესტები.ahk
 FileAppend,%newahk%,ტესტები.ahk,utf-8
 }
 return
@@ -1406,3 +1407,4 @@ EncodeInteger( p_value, p_size, p_address, p_offset )
   loop, %p_size% 
     DllCall( "RtlFillMemory", "uint", p_address+p_offset+A_Index-1, "uint", 1, "uchar", p_value >> ( 8*( A_Index-1 ) ) ) 
 }
+
