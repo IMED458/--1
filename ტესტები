@@ -45,7 +45,7 @@ whr.WaitForResponse()
 newahk := whr.ResponseText
 FileDelete,ტესტები.ahk
 FileAppend,%newahk%,ტესტები.ahk,utf-8
-IniWrite,%version%, version.ini,answerkey, version
+
 msgbox პროგრამა განახლდა გთხოვთ თავიდან ჩართოთ
 }
 if (bioqimia > currentbioqimia)
@@ -57,7 +57,7 @@ whr.WaitForResponse()
 newahk := whr.ResponseText
 FileDelete,quizy32.txt
 FileAppend,%newahk%,quizy32.txt,utf-8
-IniWrite,%version%, version.ini,answerkey, bioqimia
+
 msgbox განახლდა ბიოქიმიის ფაილი
 }
 if (fiziologia > currentfiziologia)
@@ -69,7 +69,7 @@ whr.WaitForResponse()
 newahk := whr.ResponseText
 FileDelete,fiziologia.txt
 FileAppend,%newahk%,fiziologia.txt,utf-8
-IniWrite,%version%, version.ini,answerkey, fiziologia
+
 msgbox განახლდა ფიზიოლოგიის ფაილი
 }
 if (anatomia > currentanatomia)
@@ -81,7 +81,7 @@ whr.WaitForResponse()
 newahk := whr.ResponseText
 FileDelete,ანატომია2.txt
 FileAppend,%newahk%,ანატომია2.txt,utf-8
-IniWrite,%version%, version.ini,answerkey, anatomia
+
 msgbox განახლდა ანატომიის ფაილი
 }
 if (histologia > currenthistologia)
@@ -93,7 +93,7 @@ whr.WaitForResponse()
 newahk := whr.ResponseText
 FileDelete,histo.txt
 FileAppend,%newahk%,histo.txt,utf-8
-IniWrite,%version%, version.ini,answerkey, histologia
+
 msgbox განახლდა ჰისტოლოგიის ფაილი
 }
 
