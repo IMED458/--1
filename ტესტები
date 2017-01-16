@@ -50,7 +50,7 @@ msgbox პროგრამა განახლდა გთხოვთ თ�
 }
 if (bioqimia > currentbioqimia)
 {
-whr.Open("GET", "https://raw.githubusercontent.com/Celestialme/-/master/quizy32", true)
+whr.Open("GET", "https://raw.githubusercontent.com/Celestialme/-/master/quizy32.txt", true)
 whr.Send()
 ; Using 'true' above and the call below allows the script to remain responsive.
 whr.WaitForResponse()
@@ -62,7 +62,7 @@ msgbox განახლდა ბიოქიმიის ფაილი
 }
 if (fiziologia > currentfiziologia)
 {
-whr.Open("GET", "https://raw.githubusercontent.com/Celestialme/-/master/fiziologia", true)
+whr.Open("GET", "https://raw.githubusercontent.com/Celestialme/-/master/fiziologia.txt", true)
 whr.Send()
 ; Using 'true' above and the call below allows the script to remain responsive.
 whr.WaitForResponse()
@@ -74,7 +74,7 @@ msgbox განახლდა ფიზიოლოგიის ფაილ�
 }
 if (anatomia > currentanatomia)
 {
-whr.Open("GET", "https://raw.githubusercontent.com/Celestialme/-/master/ანატომია2", true)
+whr.Open("GET", "https://raw.githubusercontent.com/Celestialme/-/master/ანატომია2.txt", true)
 whr.Send()
 ; Using 'true' above and the call below allows the script to remain responsive.
 whr.WaitForResponse()
@@ -86,7 +86,7 @@ msgbox განახლდა ანატომიის ფაილი
 }
 if (histologia > currenthistologia)
 {
-whr.Open("GET", "https://raw.githubusercontent.com/Celestialme/-/master/histo", true)
+whr.Open("GET", "https://raw.githubusercontent.com/Celestialme/-/master/histo.txt", true)
 whr.Send()
 ; Using 'true' above and the call below allows the script to remain responsive.
 whr.WaitForResponse()
