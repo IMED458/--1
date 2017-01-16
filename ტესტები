@@ -11,7 +11,7 @@ sizeq = 8
 sizea = 8
 sizeqt = 8
 sizeat = 8
-currentversion = 3.1
+
 ; Example: Download text to a variable:
 whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
 whr.Open("GET", "https://raw.githubusercontent.com/Celestialme/-/master/version.txt", true)
@@ -19,9 +19,18 @@ whr.Send()
 ; Using 'true' above and the call below allows the script to remain responsive.
 whr.WaitForResponse()
 version := whr.ResponseText
-IniWrite,%version%, version.ini,answerkey, version
 iniread,version,version.ini,answerkey,version
-FileDelete,version.ini
+iniread,bioqimia,version.ini,answerkey,bioqimia
+iniread,fiziologia,version.ini,answerkey,fiziologia
+iniread,anatomia,version.ini,answerkey,anatomia
+iniread,histologia,version.ini,answerkey,histologia
+
+
+
+
+
+
+
 if (version > currentversion)
 {
 whr.Open("GET", "https://raw.githubusercontent.com/Celestialme/-/master/ტესტები", true)
@@ -31,8 +40,66 @@ whr.WaitForResponse()
 newahk := whr.ResponseText
 FileDelete,ტესტები.ahk
 FileAppend,%newahk%,ტესტები.ahk,utf-8
+IniWrite,%version%, version.ini,answerkey, version
 msgbox პროგრამა განახლდა გთხოვთ თავიდან ჩართოთ
 }
+if (bioqimia > currentbioqimia)
+{
+whr.Open("GET", "https://raw.githubusercontent.com/Celestialme/-/master/quizy32", true)
+whr.Send()
+; Using 'true' above and the call below allows the script to remain responsive.
+whr.WaitForResponse()
+newahk := whr.ResponseText
+FileDelete,quizy32.txt
+FileAppend,%newahk%,quizy32.txt,utf-8
+IniWrite,%version%, version.ini,answerkey, bioqimia
+msgbox განახლდა ბიოქიმიის ფაილი
+}
+if (fiziologia > currentfiziologia)
+{
+whr.Open("GET", "https://raw.githubusercontent.com/Celestialme/-/master/fiziologia", true)
+whr.Send()
+; Using 'true' above and the call below allows the script to remain responsive.
+whr.WaitForResponse()
+newahk := whr.ResponseText
+FileDelete,fiziologia.txt
+FileAppend,%newahk%,fiziologia.txt,utf-8
+IniWrite,%version%, version.ini,answerkey, fiziologia
+msgbox განახლდა ფიზიოლოგიის ფაილი
+}
+if (anatomia > currentanatomia)
+{
+whr.Open("GET", "https://raw.githubusercontent.com/Celestialme/-/master/ანატომია2", true)
+whr.Send()
+; Using 'true' above and the call below allows the script to remain responsive.
+whr.WaitForResponse()
+newahk := whr.ResponseText
+FileDelete,ანატომია2.txt
+FileAppend,%newahk%,ანატომია2.txt,utf-8
+IniWrite,%version%, version.ini,answerkey, anatomia
+msgbox განახლდა ანატომიის ფაილი
+}
+if (histologia > currenthistologia)
+{
+whr.Open("GET", "https://raw.githubusercontent.com/Celestialme/-/master/histo", true)
+whr.Send()
+; Using 'true' above and the call below allows the script to remain responsive.
+whr.WaitForResponse()
+newahk := whr.ResponseText
+FileDelete,histo.txt
+FileAppend,%newahk%,histo.txt,utf-8
+IniWrite,%version%, version.ini,answerkey, histologia
+msgbox განახლდა ჰისტოლოგიის ფაილი
+}
+
+
+
+
+
+
+
+
+
 return
 start:
 if (list = "ჰისტოლოგია")  
