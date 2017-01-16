@@ -19,14 +19,20 @@ whr.Send()
 ; Using 'true' above and the call below allows the script to remain responsive.
 whr.WaitForResponse()
 version := whr.ResponseText
+
 iniread,currentversion,version.ini,answerkey,version
+iniread,currentbioqimia,version.ini,answerkey,bioqimia
+iniread,currentfiziologia,version.ini,answerkey,fiziologia
+iniread,currentanatomia,version.ini,answerkey,anatomia
+iniread,currenthistologia,version.ini,answerkey,histologia
+FileDelete,version.ini
+FileAppend,%version%,version.ini
+
+iniread,version,version.ini,answerkey,version
 iniread,bioqimia,version.ini,answerkey,bioqimia
 iniread,fiziologia,version.ini,answerkey,fiziologia
 iniread,anatomia,version.ini,answerkey,anatomia
 iniread,histologia,version.ini,answerkey,histologia
-
-
-
 
 
 
