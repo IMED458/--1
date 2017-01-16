@@ -19,8 +19,9 @@ whr.Send()
 ; Using 'true' above and the call below allows the script to remain responsive.
 whr.WaitForResponse()
 version := whr.ResponseText
-IniWrite,%version%, ტესტები.ini,answerkey, version
-iniread,version,ტესტები.ini,answerkey,version
+IniWrite,%version%, version.ini,answerkey, version
+iniread,version,version.ini,answerkey,version
+FileDelete,version.ini
 if (version > currentversion)
 {
 whr.Open("GET", "https://raw.githubusercontent.com/Celestialme/-/master/ტესტები", true)
