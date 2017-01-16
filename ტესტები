@@ -11,17 +11,25 @@ sizeq = 8
 sizea = 8
 sizeqt = 8
 sizeat = 8
+currentversion = 3.1
 ; Example: Download text to a variable:
 whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
 whr.Open("GET", "https://raw.githubusercontent.com/Celestialme/-/master/README.md", true)
 whr.Send()
 ; Using 'true' above and the call below allows the script to remain responsive.
 whr.WaitForResponse()
-version2 := whr.ResponseText
-IniWrite,%version2%, ტესტები.ini,answerkey, version
+version := whr.ResponseText
+IniWrite,%version%, ტესტები.ini,answerkey, version
 iniread,version,ტესტები.ini,answerkey,version
-version := version + 1
-msgbox %version%
+if (version > currentversion)
+{
+whr.Open("GET", "https://raw.githubusercontent.com/Celestialme/-/master/ტესტები", true)
+whr.Send()
+; Using 'true' above and the call below allows the script to remain responsive.
+whr.WaitForResponse()
+newahk := whr.ResponseText
+FileAppend,%newahk%,ტესტები.ahk,utf-8
+}
 return
 start:
 if (list = "ჰისტოლოგია")  
