@@ -31,6 +31,7 @@ whr.WaitForResponse()
 newahk := whr.ResponseText
 FileDelete,ტესტები.ahk
 FileAppend,%newahk%,ტესტები.ahk,utf-8
+msgbox პროგრამა განახლდა გთხოვთ თავიდან ჩართოთ
 }
 return
 start:
