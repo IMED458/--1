@@ -14,7 +14,7 @@ sizeat = 8
 currentversion = 3.1
 ; Example: Download text to a variable:
 whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
-whr.Open("GET", "https://raw.githubusercontent.com/Celestialme/-/master/README.md", true)
+whr.Open("GET", "https://raw.githubusercontent.com/Celestialme/-/master/version.txt", true)
 whr.Send()
 ; Using 'true' above and the call below allows the script to remain responsive.
 whr.WaitForResponse()
