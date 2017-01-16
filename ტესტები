@@ -91,7 +91,7 @@ Gui, Add, CheckBox, x102 y459 w160 h20 AltSubmit vvoice  gvoice, ხმა
 Gui, Show, w869 h483, %test%
 ;===============================================================================================
 
-Menu, M2, Add, ➕, fontpt
+Menu, M2,  Add, ➕, fontpt
 Menu, M2, Add, ➖, fontmt 
 Gui, 3:Add, Radio,altsubmit x2 y99 w10 h30 gtesta vtesta, Radio
 Gui, 3:Add, Radio,altsubmit x2 y179 w10 h20 gtestb vtestb, Radio
