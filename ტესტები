@@ -1,17 +1,3 @@
-Menu, Tray, NoStandard
-Menu,Tray, Add , E&xit, GuiClose
-Gui 2: Add, DropDownList, x66 y80 w270 vlist  ,ჰისტოლოგია|ბიოქიმია|ფიზიოლოგია|ანატომია
-Gui 2: Font, S14 CDefault, Verdana
-Gui 2: Add, Text, x121 y19 w140 h50 , აირჩიეთ საგანი
-Gui 2: Add, Button, x142 y119 w100 h30 gok , OK!
-Gui 2: Show, w406 h171, არჩევა
-srch = 0
-save = 2
-sizeq = 8
-sizea = 8
-sizeqt = 8
-sizeat = 8
-
 ; Example: Download text to a variable:
 whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
 whr.Open("GET", "https://raw.githubusercontent.com/Celestialme/-/master/version.txt", true)
@@ -25,9 +11,11 @@ iniread,currentbioqimia,version.ini,answerkey,bioqimia
 iniread,currentfiziologia,version.ini,answerkey,fiziologia
 iniread,currentanatomia,version.ini,answerkey,anatomia
 iniread,currenthistologia,version.ini,answerkey,histologia
+if (version !="")
+{
 FileDelete,version.ini
 FileAppend,%version%,version.ini
-
+}
 iniread,version,version.ini,answerkey,version
 iniread,bioqimia,version.ini,answerkey,bioqimia
 iniread,fiziologia,version.ini,answerkey,fiziologia
@@ -100,6 +88,19 @@ msgbox განახლდა ჰისტოლოგიის ფაილ�
 
 
 
+Menu, Tray, NoStandard
+Menu,Tray, Add , E&xit, GuiClose
+Gui 2: Add, DropDownList, x66 y80 w270 vlist  ,ჰისტოლოგია|ბიოქიმია|ფიზიოლოგია|ანატომია
+Gui 2: Font, S14 CDefault, Verdana
+Gui 2: Add, Text, x121 y19 w140 h50 , აირჩიეთ საგანი
+Gui 2: Add, Button, x142 y119 w100 h30 gok , OK!
+Gui 2: Show, w406 h171, არჩევა
+srch = 0
+save = 2
+sizeq = 8
+sizea = 8
+sizeqt = 8
+sizeat = 8
 
 
 
