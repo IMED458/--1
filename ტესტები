@@ -123,7 +123,7 @@ else
 	if (list  = "ფიზიოლოგია")
 	{
 	FileRead, quz,%A_WorkingDir%\fiziologia.txt
-	test = ტესტი ბიოქიმიაში
+	test = ტესტი ფიზიოლოგიაში
 	}
 	 if (list  = "ანატომია")
 	{
